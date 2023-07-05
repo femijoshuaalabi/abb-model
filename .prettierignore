@@ -1,0 +1,13 @@
+**/.cache/
+**/build/
+**/dist/
+**/out/
+
+**/bower_components/
+**/jspm_packages/
+**/node_modules/
+**/web_modules/
+
+**/tsconfig.json
+
+**/ios/Pods/*
