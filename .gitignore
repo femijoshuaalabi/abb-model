@@ -1,5 +1,6 @@
 #build: web
 index.js
+abb/
 # Logs
 logs
 *.log
