@@ -624,6 +624,15 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
+abb-model@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/abb-model/-/abb-model-1.0.1.tgz#30c17918278fc1daa3139ce1316b0bb79a9ad4cd"
+  integrity sha512-Ywc6gqQ+h6BZa5JFe+F84IAAu5y/HvUKDA1XYWWULarW3U9UgVN1f/aLwTfkAdnDu8kAC3FL8dUVqg2PdCppYg==
+  dependencies:
+    natural "^6.3.0"
+    node-nlp "^4.26.1"
+    wordpos "^2.1.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

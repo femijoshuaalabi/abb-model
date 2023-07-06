@@ -1,8 +1,8 @@
-import { NlpManager } from 'node-nlp';
 import fs from 'fs';
 import fsp from 'fs/promises';
 import path from 'path';
-import { isFileExist } from '../utils/isFileExist.js';
+import { NlpManager } from '../nlp/index.js';
+import { isFileExist } from '../utils/isFileExist.mjs';
 
 export default async function (modelObject) {
     const abbModelPath = 'abb/model.abb';
@@ -39,6 +39,7 @@ export default async function (modelObject) {
         languages: ['en'],
         forceNER: true,
         nlu: { log: true },
+        modelFileName: path.join(process.cwd(), abbModelPath),
     });
 
     if (isFileExist(path.join(process.cwd(), abbModelPath))) {
@@ -60,6 +61,6 @@ export default async function (modelObject) {
     }
     // Train and save the model.
     await manager.train();
-    manager.save(path.join(process.cwd(), abbModelPath), true);
+    manager.save(path.join(process.cwd(), abbModelPath));
     return 'Train and save the model successfully';
 }

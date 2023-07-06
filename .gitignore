@@ -1,5 +1,6 @@
 #build: web
-index.js
+index.mjs
+test.mjs
 abb/
 # Logs
 logs
