@@ -3,7 +3,7 @@
     "email": "femijoshuaalabi@gmail.com",
     "url": "https://github.com/femijoshuaalabi",
     "description": "This refers to the various models of conversational AI.",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "main": "abb.mjs",
     "license": "MIT",
     "homepage": "https://github.com/femijoshuaalabi/abb-model.git",
@@ -35,11 +35,10 @@
         "entity extraction"
     ],
     "scripts": {
-        "start": "nodemon test.mjs"
+        "start": "nodemon test.mjs",
+        "publish": "git add . & git commit -m 'publish' & git push origin main & npm publish"
     },
     "dependencies": {
-        "natural": "^6.3.0",
-        "wordpos": "^2.1.0",
         "@nlpjs/builtin-duckling": "^4.26.1",
         "@nlpjs/builtin-microsoft": "^4.26.1",
         "@nlpjs/core-loader": "^4.26.1",
@@ -54,7 +53,10 @@
         "@nlpjs/request": "^4.25.0",
         "@nlpjs/sentiment": "^4.26.1",
         "@nlpjs/similarity": "^4.26.1",
-        "@nlpjs/xtables": "^4.25.0"
+        "@nlpjs/xtables": "^4.25.0",
+        "abb-model": "^1.0.5",
+        "natural": "^6.3.0",
+        "wordpos": "^2.1.0"
     },
     "devDependencies": {
         "eslint": "^8.38.0",

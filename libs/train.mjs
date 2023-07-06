@@ -49,6 +49,35 @@ export default async function (modelObject) {
 
     const intents = JSON.parse(getModelData);
     for (let i = 0; i < intents.length; i++) {
+        if (typeof intents[i].patterns == 'undefined' || !intents[i].patterns) {
+            console.error("Sorry, you don't have patterns in your object");
+            return;
+        }
+        if (typeof intents[i].responses == 'undefined' || !intents[i].responses) {
+            console.error("Sorry, you don't have responses in your object");
+            return;
+        }
+
+        if (typeof intents[i].tag == 'undefined' || !intents[i].tag) {
+            console.error("Sorry, you don't have tag in your object");
+            return;
+        }
+
+        if (!Array.isArray(intents[i].responses)) {
+            console.error('Your responses must be an array');
+            return;
+        }
+
+        if (!Array.isArray(intents[i].patterns)) {
+            console.error('Your patterns must be an array');
+            return;
+        }
+
+        if (Array.isArray(intents[i].tag)) {
+            console.error('Sorry, tag can not be a string');
+            return;
+        }
+
         const patterns = intents[i].patterns;
         const responses = intents[i].responses;
         const tag = intents[i].tag;
