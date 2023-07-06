@@ -48,6 +48,8 @@ Successfully train and save the model
 use your abb-model :
 
 ```javascript
+import { abb } from 'abb-model';
+
 const response = await abb('Hello');
 console.log(response);
 ```
