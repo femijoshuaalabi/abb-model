@@ -3,7 +3,7 @@
     "email": "femijoshuaalabi@gmail.com",
     "url": "https://github.com/femijoshuaalabi",
     "description": "This refers to the various models of conversational AI.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "abb.mjs",
     "license": "MIT",
     "homepage": "https://github.com/femijoshuaalabi/abb-model.git",
