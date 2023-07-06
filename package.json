@@ -36,7 +36,7 @@
     ],
     "scripts": {
         "start": "nodemon test.mjs",
-        "publish": "git add . & git commit -m 'publish' & git push origin main & npm publish"
+        "publish-all": "git add . & git commit -m 'publish' & git push origin main & npm publish"
     },
     "dependencies": {
         "@nlpjs/builtin-duckling": "^4.26.1",
@@ -54,7 +54,7 @@
         "@nlpjs/sentiment": "^4.26.1",
         "@nlpjs/similarity": "^4.26.1",
         "@nlpjs/xtables": "^4.25.0",
-        "abb-model": "^1.0.5",
+        "abb-model": "^1.0.7",
         "natural": "^6.3.0",
         "wordpos": "^2.1.0"
     },

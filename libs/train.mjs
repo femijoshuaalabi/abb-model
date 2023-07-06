@@ -74,7 +74,7 @@ export default async function (modelObject) {
         }
 
         if (Array.isArray(intents[i].tag)) {
-            console.error('Sorry, tag can not be a string');
+            console.error('Sorry, tag can only be a string');
             return;
         }
 
