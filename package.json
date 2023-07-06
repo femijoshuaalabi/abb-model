@@ -38,7 +38,6 @@
         "start": "nodemon test.mjs"
     },
     "dependencies": {
-        "abb-model": "^1.0.1",
         "natural": "^6.3.0",
         "wordpos": "^2.1.0",
         "@nlpjs/builtin-duckling": "^4.26.1",

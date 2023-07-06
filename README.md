@@ -42,7 +42,7 @@ console.log(getTrain);
 This will show this result in console:
 
 ```bash
-Train and save the model successfully
+Successfully train and save the model
 ```
 
 use your abb-model :

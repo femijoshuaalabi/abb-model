@@ -62,5 +62,5 @@ export default async function (modelObject) {
     // Train and save the model.
     await manager.train();
     manager.save(path.join(process.cwd(), abbModelPath));
-    return 'Train and save the model successfully';
+    return 'Successfully train and save the model';
 }
