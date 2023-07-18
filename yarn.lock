@@ -671,6 +671,30 @@ abb-model@^1.0.7:
     natural "^6.3.0"
     wordpos "^2.1.0"
 
+abb-model@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/abb-model/-/abb-model-1.0.8.tgz#451db235ef634e4453283eccd0cde4f614eedb47"
+  integrity sha512-cTusKVDp7zfToKrASvCJRc7puov4eNXHPv3LxlJLxJMjat+4dAQ4ZZpkpj8So8+a7JcVQfqCPIkApQfsCKQ2gQ==
+  dependencies:
+    "@nlpjs/builtin-duckling" "^4.26.1"
+    "@nlpjs/builtin-microsoft" "^4.26.1"
+    "@nlpjs/core-loader" "^4.26.1"
+    "@nlpjs/emoji" "^4.26.1"
+    "@nlpjs/evaluator" "^4.26.1"
+    "@nlpjs/lang-all" "^4.26.1"
+    "@nlpjs/language" "^4.25.0"
+    "@nlpjs/neural" "^4.25.0"
+    "@nlpjs/nlg" "^4.26.1"
+    "@nlpjs/nlp" "^4.27.0"
+    "@nlpjs/nlu" "^4.27.0"
+    "@nlpjs/request" "^4.25.0"
+    "@nlpjs/sentiment" "^4.26.1"
+    "@nlpjs/similarity" "^4.26.1"
+    "@nlpjs/xtables" "^4.25.0"
+    abb-model "^1.0.7"
+    natural "^6.3.0"
+    wordpos "^2.1.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

@@ -17,23 +17,49 @@ export default async function (modelObject) {
         return;
     }
 
+    const importType = modelObject.type;
     const modelPath = modelObject.model;
+
     if (typeof modelPath == 'undefined') {
         console.error('Please provide your Model Path');
         return;
     }
 
-    if (!modelPath?.match('.json$', 'i')) {
-        console.error('Please make sure your Model is a JSON file');
+    if (typeof importType == 'undefined') {
+        console.error('Please provide the import type');
         return;
     }
 
-    if (!isFileExist(path.join(process.cwd(), modelPath))) {
-        console.error('Model file does not exist');
-        return;
-    }
+    let getModelData;
+    let intents;
 
-    const getModelData = fs.readFileSync(path.join(process.cwd(), modelPath), 'utf8');
+    if (importType == 'array') {
+        if (!Array.isArray(modelPath)) {
+            console.error('Please assign a valid array objects');
+            return;
+        }
+        getModelData = modelPath;
+        intents = getModelData;
+        console.log(intents);
+    } else {
+        if (typeof modelPath?.match == 'undefined') {
+            console.error('Please make sure your Model is a JSON file');
+            return;
+        }
+
+        if (!modelPath?.match('.json$', 'i')) {
+            console.error('Please make sure your Model is a JSON file');
+            return;
+        }
+
+        if (!isFileExist(path.join(process.cwd(), modelPath))) {
+            console.error('Model file does not exist');
+            return;
+        }
+
+        getModelData = fs.readFileSync(path.join(process.cwd(), modelPath), 'utf8');
+        intents = JSON.parse(getModelData);
+    }
 
     const manager = new NlpManager({
         languages: ['en'],
@@ -47,7 +73,6 @@ export default async function (modelObject) {
         manager.import(model);
     }
 
-    const intents = JSON.parse(getModelData);
     for (let i = 0; i < intents.length; i++) {
         if (typeof intents[i].patterns == 'undefined' || !intents[i].patterns) {
             console.error("Sorry, you don't have patterns in your object");

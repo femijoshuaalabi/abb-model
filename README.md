@@ -14,7 +14,7 @@ To use ABB in your project:
     yarn add abb-model
 ```
 
-Create a Model:
+Create a Model in JSON file:
 
 ```javascript
 [
@@ -33,7 +33,41 @@ Train your abb-model:
 import { train } from 'abb-model';
 
 const getTrain = await train({
+    type: 'json',
     model: './model.json',
+});
+
+console.log(getTrain);
+```
+
+This will show this result in console:
+
+```bash
+Successfully train and save the model
+```
+
+Create a Model in JS file:
+
+```javascript
+export default [
+    {
+        tag: 'greeting',
+        patterns: ['Hi there', 'How are you', 'Is anyone there?', 'Hey', 'Hello', 'Good day'],
+        responses: ['Hello', 'Good to see you again', 'Hi there, how can I help?'],
+        context: [''],
+    },
+];
+```
+
+Train your abb-model:
+
+```javascript
+import { train } from 'abb-model';
+import model from './model';
+
+const getTrain = await train({
+    type: 'array',
+    model,
 });
 
 console.log(getTrain);
@@ -66,6 +100,9 @@ This will show this result in console:
   answer: 'Hi there, how can I help?'
 }
 ```
+
+<b>LICENSE</b>
+</br>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
